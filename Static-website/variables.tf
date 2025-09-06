@@ -10,12 +10,12 @@ variable "subdomain_name" {
 }
 variable "acm_certificate_arn" {
   description = "The ARN of an ACM certificate for the subdomain_name"
-}   
+}
 variable "local_file_path" {
   description = "The local path to the static website files"
-  type = string
+  type        = string
 }
 variable "index_page" {
   description = "The path to the index page of the static website"
-  default = "index.html"
+  default     = "index.html"
 }
