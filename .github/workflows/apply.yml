@@ -24,16 +24,21 @@ jobs:
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init
+        working-directory: ./Static-website
         run: terraform init
 
       - name: Terraform Format Check
+        working-directory: ./Static-website
         run: terraform fmt -check
 
       - name: Terraform Validate
+        working-directory: ./Static-website
         run: terraform validate
 
       - name: Terraform Plan
+        working-directory: ./Static-website
         run: terraform plan -out=tfplan
 
       - name: Terraform Apply
+        working-directory: ./Static-website
         run: terraform apply -auto-approve tfplan
