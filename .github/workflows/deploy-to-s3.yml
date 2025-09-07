@@ -1,10 +1,11 @@
+#YAML file to deploy website to S3 using GitHub Actions
 name: Deploy Website to S3
-
+# Trigger the workflow on push to main branch
 on:
   push:
     branches:
       - main  # or your deployment branch
-
+# Define the job to run
 jobs:
   deploy:
     runs-on: ubuntu-latest

@@ -1,3 +1,7 @@
+variable "oai_iam_arn" {
+  description = "IAM ARN for CloudFront Origin Access Identity"
+  type        = string
+}
 variable "bucket_name" {
   description = "The name of the S3 bucket to create"
   type        = string
