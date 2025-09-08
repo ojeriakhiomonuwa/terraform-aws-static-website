@@ -37,8 +37,8 @@ jobs:
 
       - name: Terraform Plan
         working-directory: ./Static-website
-        run: terraform plan -out=tfplan
+        run: terraform plan -out=tfplan -var="acm_certificate_arn=${{ secrets.ACM_CERT_ARN }}"
 
       - name: Terraform Apply
         working-directory: ./Static-website
-        run: terraform apply -auto-approve tfplan
+        run: terraform apply -auto-approve tfplan 
