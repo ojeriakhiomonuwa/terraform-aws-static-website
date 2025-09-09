@@ -1,0 +1,5 @@
+aws_region          = "us-east-1"
+domain_name         = "ojes.online"
+subdomain_name      = "www"
+local_file_path = "./2135_mini_finance"
+index_page          = "index.html"

@@ -20,6 +20,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: us-east-1 # update if different
+      ACM_CERT_ARN: ${{ secrets.ACM_CERT_ARN }} # ARN of your ACM certificate
 # Define the steps to execute
     steps:
       - name: Checkout code
