@@ -8,7 +8,7 @@ It uses **S3, CloudFront, ACM, and Route53** with **CI/CD pipelines** for automa
 
 ### 1. **S3 Buckets**
 - Store static website files (HTML, CSS, JS, images).  
-- Configured for secure storage (no public access, only CloudFront can access).  
+- Configured for secure storage (no public access, only CloudFront can access).   
 - Logging bucket may also be included to store CloudFront/S3 access logs.  
 
 ### 2. **ACM (AWS Certificate Manager)**
