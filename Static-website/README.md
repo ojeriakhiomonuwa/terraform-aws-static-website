@@ -4,7 +4,7 @@ This project provisions and manages the infrastructure required to host a **stat
 It uses **S3, CloudFront, ACM, and Route53** with **CI/CD pipelines** for automatic deployment and destruction.  
 
 
-##  AWS Resources Used
+##  AWS Resources Used 
 
 ### 1. **S3 Buckets**
 - Store static website files (HTML, CSS, JS, images).  
