@@ -3,7 +3,11 @@ name: Deploy Website to S3
 # Trigger the workflow on push to main branch
 on:
   workflow_dispatch: # Run manually from GitHub Actions tab
-    
+# Ensure only one run at a time to prevent state conflicts
+concurrency:
+  group: terraform-state
+  cancel-in-progress: true
+
 # Define the job to run
 jobs:
   deploy:
