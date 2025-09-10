@@ -1,5 +1,5 @@
 #YAML file to destroy Terraform-managed infrastructure using GitHub Actions
-name: Terraform Destroy
+name: Terraform Destroy v2
 
 # Trigger the workflow manually
 on:
@@ -29,10 +29,17 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
+      - name: Show current directory
+        run: pwd
+
+      - name: List directories
+        run: ls -la
+
+      - name: Find Terraform files
+        run: find . -name "*.tf" -type f
+
       - name: Terraform Init
-        working-directory: ./static-website
         run: terraform init
 
       - name: Terraform Destroy
-        working-directory: ./static-website
         run: terraform destroy -auto-approve
